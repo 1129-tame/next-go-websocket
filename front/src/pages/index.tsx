@@ -7,7 +7,7 @@ const Home: NextPage = () => {
   const [formMessage, setFormMessage] = useState('')
   const [sentMessage, setSentMessage] = useState('')
 
-  const sendData = (event: { target: any; preventDefault: () => void }) => {
+  const sendData = (event: any) => {
     event.preventDefault()
     setFormMessage(event.target[0].value)
     socketRef.current?.send(event.target[0].value)
